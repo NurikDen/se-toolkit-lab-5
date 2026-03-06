@@ -1,6 +1,7 @@
 import { useState, useEffect, useReducer, FormEvent } from 'react'
 import './App.css'
 
+
 const STORAGE_KEY = 'api_key'
 
 interface Item {
@@ -16,6 +17,8 @@ type FetchState =
   | { status: 'success'; items: Item[] }
   | { status: 'error'; message: string }
 
+
+  
 type FetchAction =
   | { type: 'fetch_start' }
   | { type: 'fetch_success'; data: Item[] }
